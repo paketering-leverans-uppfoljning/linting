@@ -1,0 +1,16 @@
+name: Linting
+
+on:
+  pull_request:
+    branches:
+      [main, master]
+  push:
+    branches:
+      [main, master]
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the current branch
+        uses: actions/checkout@v4
