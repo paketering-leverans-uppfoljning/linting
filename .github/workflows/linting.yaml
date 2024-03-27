@@ -14,3 +14,9 @@ jobs:
     steps:
       - name: Checkout the current branch
         uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+      - name: Run npm install
+        run: npm install
+      - name: Run linting
+        run: npm run lint
